@@ -13,6 +13,7 @@ class AddViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     
     @IBAction func add(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     override func viewDidLoad() {

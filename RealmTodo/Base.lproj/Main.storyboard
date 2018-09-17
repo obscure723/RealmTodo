@@ -18,23 +18,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sIC-cT-ggQ">
-                                <rect key="frame" x="16" y="176" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sIC-cT-ggQ">
+                                <rect key="frame" x="16" y="174" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8c-op-611">
-                                <rect key="frame" x="164" y="240" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8c-op-611">
+                                <rect key="frame" x="140" y="244" width="95" height="30"/>
+                                <state key="normal" title="追加"/>
                                 <connections>
                                     <action selector="add:" destination="t5d-dQ-rWX" eventType="touchUpInside" id="rMy-9h-Z1v"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sIC-cT-ggQ" firstAttribute="leading" secondItem="xKs-IG-k1F" secondAttribute="leading" constant="16" id="9ER-zZ-83n"/>
+                            <constraint firstItem="xKs-IG-k1F" firstAttribute="trailing" secondItem="n8c-op-611" secondAttribute="trailing" constant="140" id="JbJ-Mq-ttf"/>
+                            <constraint firstItem="n8c-op-611" firstAttribute="top" secondItem="sIC-cT-ggQ" secondAttribute="bottom" constant="40" id="NDs-vf-vBp"/>
+                            <constraint firstItem="xKs-IG-k1F" firstAttribute="trailing" secondItem="sIC-cT-ggQ" secondAttribute="trailing" constant="16" id="TLA-bo-vgm"/>
+                            <constraint firstItem="n8c-op-611" firstAttribute="leading" secondItem="xKs-IG-k1F" secondAttribute="leading" constant="140" id="X7O-bt-7Nd"/>
+                            <constraint firstItem="sIC-cT-ggQ" firstAttribute="top" secondItem="xKs-IG-k1F" secondAttribute="top" constant="110" id="axg-AU-oRF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xKs-IG-k1F"/>
                     </view>
                     <connections>
@@ -48,7 +54,7 @@
         <!--View Controller-->
         <scene sceneID="8NA-EQ-pRm">
             <objects>
-                <viewController id="8zU-c3-02i" sceneMemberID="viewController">
+                <viewController id="8zU-c3-02i" customClass="ViewController" customModule="RealmTodo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CJh-9i-iOI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,6 +75,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="gN0-Bo-ZFv" id="PrR-fc-94c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hgX-iJ-Njq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
