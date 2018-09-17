@@ -11,8 +11,12 @@ import UIKit
 class AddViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
+    let todo = Todo()
     
     @IBAction func add(_ sender: UIButton) {
+        
+        todo.create(title: textField.text!)
+        
         self.navigationController?.popViewController(animated: true)
     }
     
