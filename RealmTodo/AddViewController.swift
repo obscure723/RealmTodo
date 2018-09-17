@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AddViewController.swift
 //  RealmTodo
 //
 //  Created by yonekan on 2018/09/17.
@@ -8,12 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class AddViewController: UIViewController {
+    
+    @IBOutlet weak var textField: UITextField!
+    
+    @IBAction func add(_ sender: UIButton) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
 }
-
