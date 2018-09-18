@@ -35,4 +35,14 @@ class Todo: Object {
             self.list.append(todo)
         }
     }
+    
+    func delete(id: Int) -> Void {
+        let realm = try! Realm()
+        
+        let todo = realm.objects(Todo.self).filter("id = \(id)").first
+        
+        try! realm.write {
+            realm.delete(todo!)
+        }
+    }
 }
